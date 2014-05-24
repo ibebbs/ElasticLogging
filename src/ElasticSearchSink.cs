@@ -39,7 +39,7 @@ namespace ElasticLogging
 
         private string GetIndex(EventEntry entry)
         {
-            return string.Format("{0}{1}", _index, _appendDate ? entry.Timestamp.ToString(_dateFormat) : null);
+            return string.Format("{0}{1}", _index, _appendDate ? string.Concat("-", entry.Timestamp.ToString(_dateFormat)) : null);
         }
 
         private void Post(EventEntry entry)
