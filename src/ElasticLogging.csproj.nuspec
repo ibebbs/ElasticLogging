@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ElasticLogging</id>
+    <version>1.0.0</version>
+    <authors>Ian Bebbington</authors>
+    <owners>Ian Bebbington</owners>
+    <licenseUrl>https://github.com/ibebbs/ElasticLogging/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ibebbs/ElasticLogging</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A custom event sync for SLAB allowing in or out of process logging of ETW events to ElasticSearch</description>
+    <copyright>Copyright 2014</copyright>
+    <tags>SLAB ETW logging instrumentation ElasticSearch</tags>
+  </metadata>
+</package>
