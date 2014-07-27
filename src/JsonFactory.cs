@@ -35,6 +35,7 @@ namespace ElasticLogging
             jo["FormattedMessage"] = eventEntry.FormattedMessage;
             jo["Payload"] = eventEntry.Payload();
             jo["Timestamp"] = eventEntry.Timestamp;
+            jo["@timestamp"] = DateTimeOffset.UtcNow;
 
             return jo.ToString();
         }

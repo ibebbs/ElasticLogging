@@ -33,6 +33,8 @@ namespace ElasticLogging
             _formatter = formatter ?? new EventTextFormatter();
         }
 
+        public ElasticSearchSink(string connectionString, string index, bool appendDate, string dateFormat) : this(connectionString, index, appendDate, dateFormat, new EventTextFormatter()) { }
+
         public ElasticSearchSink(string connectionString, string index, bool appendDate, IEventTextFormatter formatter) : this(connectionString, index, appendDate, DefaultDateFormat, formatter) { }
 
         public ElasticSearchSink(string connectionString, string index) : this(connectionString, index, false, new EventTextFormatter()) { }
