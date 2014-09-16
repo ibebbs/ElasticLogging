@@ -25,12 +25,14 @@ namespace ElasticLogging
         public static string ToJson(this EventEntry eventEntry)
         {
             JObject jo = new JObject();
+
             jo["EventId"] = eventEntry.EventId;
             jo["EventName"] = eventEntry.Schema.EventName;
             jo["ProviderId"] = eventEntry.ProviderId;
             jo["ProviderName"] = eventEntry.Schema.ProviderName;
             jo["TaskName"] = eventEntry.Schema.TaskName;
             jo["OpCodeName"] = eventEntry.Schema.OpcodeName;
+            jo["Level"] = eventEntry.Schema.Level.ToString();
             jo["KeywordsDescription"] = eventEntry.Schema.KeywordsDescription;
             jo["FormattedMessage"] = eventEntry.FormattedMessage;
             jo["Payload"] = eventEntry.Payload();
