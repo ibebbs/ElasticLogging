@@ -2,11 +2,6 @@
 using Microsoft.Practices.EnterpriseLibrary.SemanticLogging.Formatters;
 using PlainElastic.Net;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElasticLogging
 {
@@ -58,8 +53,7 @@ namespace ElasticLogging
             }
             catch (Exception error)
             {
-                // Do nothing for now
-                Console.WriteLine(error.ToString());
+                SemanticLoggingEventSource.Log.CustomSinkUnhandledFault(error.Message);
             }
         }
 
